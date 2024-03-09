@@ -1,4 +1,4 @@
-#!/usr/binipython3
+#!/usr/bin/python3
 """A file writting  function."""
 def write_fle(filename="", text=""):
     """write a string to a UTF8 text file.
@@ -9,5 +9,5 @@ def write_fle(filename="", text=""):
     Returns:
     The numberof characters written.
     """
-    with open(filename, encoding="utf-8") as f:
+    with open(filename, "w", encoding="utf-8") as f:
         return f.write(text)
