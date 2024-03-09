@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """A file writting  function."""
-def write_fle(filename="", text=""):
+def write_file(filename="", text=""):
     """write a string to a UTF8 text file.
 
     Args:
