@@ -2,10 +2,8 @@
 /* A script that prints 3 lines of code, with strings:
  * "C is fun", "Python is cool", "JavaScript is amazing".
  */
-const my_C-code = "C is fun \n";
-const my_Python-code = "Python is cool \n";
-const my_JS-code = "JavaScript is amazing \n";
+const myCCode = 'C is fun';
+const myPythonCode = 'Python is cool';
+const myJsCode = 'JavaScript is amazing';
 
-console.log(my_C-code);
-console.log(my_Python-code);
-console.log(my_JS-code);
+console.log(`${myCCode}\n${myPythonCode}\n${myJsCode}\n`);
