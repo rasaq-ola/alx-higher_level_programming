@@ -5,4 +5,7 @@ You must use console.log(...) to print all output
 You are not allowed to use var
 */
 
-console.log(process.argv[2] + 'is' + process.argv[3]);
+const arg1 = process.argv[2] || 'undefined';
+const arg2 = process.argv[3] || 'undefined';
+
+console.log(`${arg1} is ${arg2}`);

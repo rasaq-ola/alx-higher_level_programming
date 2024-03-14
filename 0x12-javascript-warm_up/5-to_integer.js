@@ -9,7 +9,7 @@ You are not allowed to use try/catch
 const number = parseInt(process.argv[2]);
 
 if (!isNaN(number)) {
-  console.log('My Number:', number);
+  console.log('My Number: ${number}');
 } else {
   console.log('Not a number');
 }
