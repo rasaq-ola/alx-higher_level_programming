@@ -6,10 +6,11 @@ You must use console.log(...) to print all output
 You are not allowed to use var
 You are not allowed to use try/catch
 */
+
 const number = parseInt(process.argv[2]);
 
 if (!isNaN(number)) {
-  console.log('My Number: ${number}');
+  console.log(`My number: ${number}`);
 } else {
   console.log('Not a number');
 }
