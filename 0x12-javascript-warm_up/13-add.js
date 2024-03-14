@@ -7,4 +7,9 @@ The name of the function must be add
 You are not allowed to use var
 */
 
+function add(a, b) {
+    return a + b;
+}
+
+module.exports.add = add;
 
