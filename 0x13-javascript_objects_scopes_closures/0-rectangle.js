@@ -5,4 +5,7 @@ You must use the class notation for defining your class
 */
 class Rectangle {
   // Empty class body
+  constructor () {}
 }
+
+module.exports = Rectangle;
