@@ -30,4 +30,4 @@ class Square extends Rectangle {
     super.print(c);
   }
 }
-module.exports = square;
+module.exports = Square;
