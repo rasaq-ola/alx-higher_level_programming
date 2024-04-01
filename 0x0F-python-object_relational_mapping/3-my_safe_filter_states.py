@@ -1,15 +1,21 @@
 #!/usr/bin/python3
-"""Takes in an argument and displays all values in the states table
-   of hbtn_0e_0_usa where name matches the argument, safe from MySQL injection"""
-
+"""Prints all City objects from the database hbtn_0e_14_usa."""
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
+from model_city import City
 import sys
-import MySQLdb
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = %s ORDER BY id ASC", (sys.argv[4],))
-    for state in cursor.fetchall():
-        print(state)
-    cursor.close()
-    db.close()
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(username, password, db_name))
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    for city, state in session.query(City, State).filter(City.state_id == State.id).order_by(City.id):
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
+
+    session.close()
