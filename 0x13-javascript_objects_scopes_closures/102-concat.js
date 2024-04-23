@@ -10,4 +10,3 @@ const dataB = fs.readFileSync(fileB, 'utf8');
 const dataC = dataA + dataB;
 
 fs.writeFileSync(fileC, dataC);
-
