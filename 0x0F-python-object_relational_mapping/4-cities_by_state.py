@@ -22,8 +22,10 @@ if __name__ == "__main__":
     # Fetching all the results
     cities = cursor.fetchall()
     # Printing results
+
     for city in cities:
         print(city)
+
     # Closing cursor and database
     cursor.close()
     db.close()
