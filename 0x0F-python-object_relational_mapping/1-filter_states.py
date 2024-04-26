@@ -1,34 +1,28 @@
 #!/usr/bin/python3
-"""
-Script that lists all states with a name starting with N from the database hbtn_0e_0_usa.
-"""
+"""Script that lists all states with a name starting with N
+   (upper N) from the database hbtn_0e_0_usa"""
 
-import sys
 import MySQLdb
+import sys
 
 if __name__ == "__main__":
-    # Database connection
-    db = MySQLdb.connect(
-        host="localhost",
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db=sys.argv[3],
-        port=3306
-    )
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
 
-    # Cursor creation
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=username,
+                         passwd=password,
+                         db=db_name)
+
     cursor = db.cursor()
 
-    # Executing the query
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
 
-    # Fetching all the results
-    states = cursor.fetchall()
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
 
-    # Printing results
-    for state in states:
-        print(state)
-
-    # Closing cursor and database
     cursor.close()
     db.close()
