@@ -7,6 +7,7 @@ import MySQLdb
 
 if __name__ == "__main__":
     # Database connection
+
     db = MySQLdb.connect(
         host="localhost",
         user=sys.argv[1],
