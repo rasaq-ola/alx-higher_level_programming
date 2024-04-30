@@ -11,6 +11,3 @@ To start the command interpreter, run the `console.py` script.
 Once the command interpreter is running, you can use various commands to manage objects. Type `help` to see a list of available commands.
 
 ### Examples
-$ ./console.py
-(hbnb) help
-Documented commands (type help <topic>):
