@@ -1,3 +1,3 @@
 #!/bin/bash
-# Send a GET request to a URL and display the body of the response if status code is 200
-curl -sL -o /dev/null -w "%{http_code}" "$1" | grep -q "200" && curl -s "$1"
+# Send GET rqst. to URL & display d body of d resp. if stat code is 200
+curl -sL "$1" -o /dev/null -w "%{http_code}" | grep -q "200" && curl -sL "$1"
