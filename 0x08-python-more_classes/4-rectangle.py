@@ -70,9 +70,13 @@ if __name__ == "__main__":
     myrectangle = Rectangle(2, 4)
     print(str(myrectangle))
     print(repr(myrectangle))
+
     print(myrectangle)
+
     myrectanglerep = repr(myrectangle)
     newrectangle = eval(myrectanglerep)
     print(newrectangle)
+
     print(repr(newrectangle))
+
     print(myrectangle != newrectangle)
