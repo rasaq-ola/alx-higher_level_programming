@@ -72,7 +72,11 @@ if __name__ == "__main__":
     # Test cases
     myrectangle = Rectangle(2, 4)
     print(str(myrectangle))
+
+    myrectangle = Rectangle(2, 4)
     print(repr(myrectangle))
+
+    myrectangle = Rectangle(2, 4)
     print(myrectangle)
 
     myrectangle = Rectangle(0, 4)
