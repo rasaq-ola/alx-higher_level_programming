@@ -14,7 +14,7 @@ def add_integer(a, b=98):
 
     Raises:
         TypeError: If either `a` or `b` is not an integer or float.
-        ValueError: If either `a` or `b` is a NaN or infinite.
+        ValueError: If either `a` or `b` is NaN or infinite.
 
     Returns:
         int: The sum of `a` and `b`, casted to integers.
