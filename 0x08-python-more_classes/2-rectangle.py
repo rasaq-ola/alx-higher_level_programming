@@ -81,4 +81,3 @@ if __name__ == "__main__":
     myrectangle = Rectangle()
     print("{} - {} => {} / {}".format(myrectangle.width, myrectangle.height,
                                        myrectangle.area(), myrectangle.perimeter()))
-
