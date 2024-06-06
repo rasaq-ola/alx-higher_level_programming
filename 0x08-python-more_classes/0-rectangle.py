@@ -14,6 +14,7 @@ class Rectangle:
         """Return an empty dictionary."""
         return {}
 
+
 if __name__ == "__main__":
     myrectangle = Rectangle()
     print(type(myrectangle))
