@@ -64,3 +64,15 @@ if __name__ == "__main__":
     # Test cases
     myrectangle = Rectangle(2, 4)
     print("{} - {} => {}".format(myrectangle.width, myrectangle.height, myrectangle.area()))
+
+    myrectangle = Rectangle(2, 4)
+    print("{} - {} => {}".format(myrectangle.width, myrectangle.height, myrectangle.perimeter()))
+
+    myrectangle = Rectangle(10, 10)
+    print("{} - {} => {} / {}".format(myrectangle.width, myrectangle.height, myrectangle.area(), myrectangle.perimeter()))
+
+    myrectangle = Rectangle(10)
+    print("{} - {} => {} / {}".format(myrectangle.width, myrectangle.height, myrectangle.area(), myrectangle.perimeter()))
+
+    myrectangle = Rectangle()
+    print("{} - {} => {} / {}".format(myrectangle.width, myrectangle.height, myrectangle.area(), myrectangle.perimeter()))
